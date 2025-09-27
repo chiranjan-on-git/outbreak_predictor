@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Outbreak Predictor</title>
+    
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Import the Chart.js library from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Regional Disease Outbreak Predictor</h1>
+                <p>Global forecast for Measles based on historical WHO data.</p>
+            </div>
+            <button id="theme-toggle" class="theme-button">Toggle Theme</button>
+        </header>
+
+        <!-- Loading Spinner -->
+        <div id="loader" class="loader"></div>
+
+        <main id="dashboard-content" class="hidden">
+            <div class="card">
+                <h2>Global Outbreak Radar</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Top High-Risk Countries</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
