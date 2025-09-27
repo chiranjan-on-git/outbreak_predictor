@@ -2,9 +2,6 @@
 
 An end-to-end data science application that forecasts disease outbreaks based on historical data from the World Health Organization (WHO). The project transforms raw time-series data into actionable insights, presented in a clean, interactive web dashboard.
 
-
-*(Feel free to replace this placeholder image with a screenshot of your own dashboard!)*
-
 ## Features
 
 -   **Machine Learning Model**: Utilizes an XGBoost model to forecast future disease cases for the next year.
