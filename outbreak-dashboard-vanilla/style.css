@@ -110,3 +110,70 @@ body.dark-mode .theme-button {
     border-color: #6c757d;
     color: #e0e0e0;
 }
+/* --- NEW STYLES for More Graphs --- */
+
+/* Update main layout to be single column for easier stacking */
+main {
+    grid-template-columns: 1fr;
+}
+
+/* New class to hold two charts side-by-side */
+.chart-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Make the chart row stack on smaller screens */
+@media (max-width: 900px) {
+    .chart-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styling for the data table */
+.data-table-container {
+    max-height: 400px; /* Limit height and make it scrollable */
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+}
+
+body.dark-mode .data-table-container {
+    border-color: #495057;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between cell borders */
+}
+
+.data-table th, .data-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+body.dark-mode .data-table th, body.dark-mode .data-table td {
+    border-bottom-color: #495057;
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    position: sticky; /* Makes header stick when scrolling */
+    top: 0;
+}
+
+body.dark-mode .data-table th {
+    background-color: #343a40;
+}
+
+/* Alternating row colors for readability */
+.data-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+body.dark-mode .data-table tbody tr:nth-child(even) {
+    background-color: #2c2c2c;
+}

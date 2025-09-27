@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Outbreak Predictor</title>
+    <title>Disease Measles Predictor</title>
     
     <!-- Link to our CSS file -->
     <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <h1>Regional Disease Outbreak Predictor</h1>
+                <h1>Regional Measles Outbreak Predictor</h1>
                 <p>Global forecast for Measles based on historical WHO data.</p>
             </div>
             <button id="theme-toggle" class="theme-button">Toggle Theme</button>
@@ -25,13 +25,34 @@
         <div id="loader" class="loader"></div>
 
         <main id="dashboard-content" class="hidden">
-            <div class="card">
-                <h2>Global Outbreak Radar</h2>
-                <canvas id="pieChart"></canvas>
+            <!-- Row 1: The original charts -->
+            <div class="chart-row">
+                <div class="card">
+                    <h2>Global Outbreak Radar</h2>
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="card">
+                    <h2>Top High-Risk Countries</h2>
+                    <canvas id="barChart"></canvas>
+                </div>
             </div>
+
+            <!-- Row 2: New Chart - Forecast vs. History -->
             <div class="card">
-                <h2>Top High-Risk Countries</h2>
-                <canvas id="barChart"></canvas>
+                <h2>Forecast vs. Historical Average (High-Risk)</h2>
+                <canvas id="forecastVsHistoryChart"></canvas>
+            </div>
+            
+            <!-- Row 3: New Chart - Regional Risk Distribution -->
+            <div class="card">
+                <h2>Risk Distribution by Region</h2>
+                <canvas id="regionalRiskChart"></canvas>
+            </div>
+
+            <!-- Row 4: New Data Table -->
+            <div class="card">
+                <h2>Full Data Explorer</h2>
+                <div id="dataTableContainer" class="data-table-container"></div>
             </div>
         </main>
     </div>
